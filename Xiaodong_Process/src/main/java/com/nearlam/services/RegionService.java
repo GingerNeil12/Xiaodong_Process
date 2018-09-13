@@ -3,8 +3,6 @@ package com.nearlam.services;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.earlam.validators.IValidate;
-import com.earlam.validators.RegionValidator;
 import com.nearlam.JSON.RegionJsonMapper;
 import com.nearlam.UrlConnectors.GetConnector;
 import com.nearlam.UrlConnectors.PostConnector;
@@ -15,6 +13,8 @@ import com.nearlam.datamodels.region.RegionResponseModel;
 import com.nearlam.datamodels.region.RegionUpdateModel;
 import com.nearlam.models.Company;
 import com.nearlam.models.Region;
+import com.nearlam.validators.IValidate;
+import com.nearlam.validators.RegionValidator;
 
 public class RegionService implements IRegionService
 {

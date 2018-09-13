@@ -1,14 +1,12 @@
-package com.earlam.datamodels.contact;
+package com.nearlam.datamodels.contact;
 
-public class ContactAttachModel {
-	private int id;
+public class ContactAddModel {
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String phoneNumber;
-	public int getId() {
-		return id;
-	}
+	private int companyId;
+	
 	public String getFirstName() {
 		return firstName;
 	}
@@ -21,10 +19,10 @@ public class ContactAttachModel {
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
-	
-	public void setId(int id) {
-		this.id = id;
+	public int getCompanyId() {
+		return companyId;
 	}
+	
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
@@ -37,18 +35,19 @@ public class ContactAttachModel {
 	public void setPhoneNumber(String phoneNumber) {
 		this.phoneNumber = phoneNumber;
 	}
-	
-	public ContactAttachModel(){
-		this(0, "", "", "", "");
+	public void setCompanyId(int companyId) {
+		this.companyId = companyId;
 	}
-	public ContactAttachModel(int id, String firstName, String lastName, String email, String phoneNumber) {
+	
+	public ContactAddModel() {
+		this("", "", "", "", 0);
+	}
+	public ContactAddModel(String firstName, String lastName, String email, 
+			String phoneNumber, int companyId) {
 		super();
-		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
 		this.phoneNumber = phoneNumber;
 	}
-	
-	
 }

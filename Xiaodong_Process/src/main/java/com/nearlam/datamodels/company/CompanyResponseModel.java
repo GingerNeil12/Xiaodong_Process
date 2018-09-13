@@ -3,7 +3,7 @@ package com.nearlam.datamodels.company;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.earlam.datamodels.contact.ContactAttachModel;
+import com.nearlam.datamodels.contact.ContactAttachModel;
 import com.nearlam.datamodels.region.RegionAttachModel;
 
 public class CompanyResponseModel {

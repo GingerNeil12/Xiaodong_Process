@@ -1,4 +1,4 @@
-package com.earlam.validators;
+package com.nearlam.validators;
 
 import java.util.List;
 

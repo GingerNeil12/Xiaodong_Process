@@ -2,7 +2,7 @@ package com.nearlam.datamodels.note;
 
 import java.time.LocalDateTime;
 
-import com.earlam.datamodels.contact.ContactAttachModel;
+import com.nearlam.datamodels.contact.ContactAttachModel;
 
 public class NoteResponseModel {
 	private int id;
