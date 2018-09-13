@@ -2,13 +2,21 @@ package com.nearlam.models;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Note
 {
+	@JsonProperty("Id")
 	private int id;
+	@JsonProperty("Reason")
 	private String reason;
+	@JsonProperty("Details")
 	private String details;
+	@JsonProperty("DateOfNote")
 	private LocalDateTime dateOfNote;
+	@JsonProperty("ContactId")
 	private int contactId;
+	@JsonProperty("Contact")
 	private Contact contact;
 	
 	public int getId()

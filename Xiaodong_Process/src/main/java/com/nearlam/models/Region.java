@@ -3,11 +3,17 @@ package com.nearlam.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Region 
 {
+	@JsonProperty("Id")
 	private int id;
+	@JsonProperty("Name")
 	private String name;
-	private String country;	
+	@JsonProperty("Country")
+	private String country;
+	@JsonProperty("Companies")
 	private List<Company> companies = new ArrayList<Company>();
 	
 	public int getId()

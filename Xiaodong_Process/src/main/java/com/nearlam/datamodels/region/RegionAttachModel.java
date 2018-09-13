@@ -1,44 +1,36 @@
 package com.nearlam.datamodels.region;
 
-public class RegionUpdateModel
-{
+public class RegionAttachModel {
 	private int id;
 	private String name;
 	private String country;
 	
-	public int getId()
-	{
+	public int getId() {
 		return id;
 	}
-	public String getName()
-	{
+	public String getName() {
 		return name;
 	}
-	public String getCountry()
-	{
+	public String getCountry() {
 		return country;
 	}
 	
-	public void setId(int id)
-	{
+	public void setId(int id) {
 		this.id = id;
 	}
-	public void setName(String name)
-	{
+	public void setName(String name) {
 		this.name = name;
 	}
-	public void setCountry(String country)
-	{
+	public void setCountry(String country) {
 		this.country = country;
 	}
 	
-	public RegionUpdateModel()
+	public RegionAttachModel()
 	{
 		this(0, "", "");
 	}
-	public RegionUpdateModel(int id, String name, String country)
+	public RegionAttachModel(int id, String name, String country)
 	{
-		super();
 		this.id = id;
 		this.name = name;
 		this.country = country;

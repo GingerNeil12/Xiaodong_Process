@@ -11,6 +11,7 @@ public class RegionResponseModel
 	private String name;
 	private String country;
 	private List<CompanyAttachModel> companies;
+	
 	public int getId()
 	{
 		return id;
@@ -27,6 +28,7 @@ public class RegionResponseModel
 	{
 		return companies;
 	}
+	
 	public void setId(int id)
 	{
 		this.id = id;

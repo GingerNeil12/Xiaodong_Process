@@ -3,15 +3,25 @@ package com.nearlam.models;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Contact
 {
+	@JsonProperty("Id")
 	private int id;
+	@JsonProperty("FirstName")
 	private String firstName;
+	@JsonProperty("LastName")
 	private String lastName;
+	@JsonProperty("Email")
 	private String email;
+	@JsonProperty("PhoneNumber")
 	private String phoneNumber;
+	@JsonProperty("CompanyId")
 	private int companyId;
+	@JsonProperty("Company")
 	private Company company;
+	@JsonProperty("Notes")
 	private List<Note> note = new ArrayList<Note>();
 	
 	public int getId()

@@ -6,6 +6,7 @@ public class CompanyAttachModel
 	private String name;
 	private String address;
 	private String city;
+	
 	public int getId()
 	{
 		return id;
@@ -22,6 +23,7 @@ public class CompanyAttachModel
 	{
 		return city;
 	}
+	
 	public void setId(int id)
 	{
 		this.id = id;
