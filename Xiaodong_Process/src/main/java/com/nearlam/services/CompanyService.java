@@ -145,7 +145,7 @@ public class CompanyService implements ICompanyService
 			error = "Entry not updated";
 			return false;
 		}
-		return false;
+		return true;
 	}
 	
 	private boolean validation(Company company)
