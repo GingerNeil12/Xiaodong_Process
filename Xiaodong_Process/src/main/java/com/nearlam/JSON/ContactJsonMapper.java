@@ -5,55 +5,57 @@ import java.util.List;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nearlam.models.Region;
+import com.fasterxml.jackson.databind.type.ReferenceType;
+import com.nearlam.models.Company;
+import com.nearlam.models.Contact;
 
-public class RegionJsonMapper implements IJsonMapper<Region>
+public class ContactJsonMapper implements IJsonMapper<Contact>
 {
-
 	private ObjectMapper mapper;
-
-	public RegionJsonMapper()
+	
+	public ContactJsonMapper()
 	{
 		mapper = new ObjectMapper();
 		mapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
 	}
-
+	
 	@Override
-	public Region deserialize(String json)
+	public Contact deserialize(String json)
 	{
 		try
 		{
-			return mapper.readValue(json, Region.class);
-		} 
-		catch (Exception e)
+			return mapper.readValue(json, Contact.class);
+		}
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
-	public List<Region> deserializeList(String json)
+	public List<Contact> deserializeList(String json)
 	{
 		try
 		{
-			return mapper.readValue(json, new TypeReference<List<Region>>(){});
-		} 
-		catch (Exception e)
+			return mapper.readValue(json, new TypeReference<List<Company>>(){});
+		}
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
-	public String serialize(Region obj)
+	public String serialize(Contact obj)
 	{
 		try
 		{
 			return mapper.writeValueAsString(obj);
-		} 
-		catch (Exception e)
+		}
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
+
 }

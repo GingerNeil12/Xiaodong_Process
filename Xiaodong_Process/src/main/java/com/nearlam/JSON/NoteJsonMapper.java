@@ -5,55 +5,56 @@ import java.util.List;
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.nearlam.models.Region;
+import com.fasterxml.jackson.databind.type.ReferenceType;
+import com.nearlam.models.Note;
 
-public class RegionJsonMapper implements IJsonMapper<Region>
+public class NoteJsonMapper implements IJsonMapper<Note>
 {
-
 	private ObjectMapper mapper;
-
-	public RegionJsonMapper()
+	
+	public NoteJsonMapper()
 	{
 		mapper = new ObjectMapper();
 		mapper.configure(MapperFeature.ACCEPT_CASE_INSENSITIVE_PROPERTIES, true);
 	}
-
+	
 	@Override
-	public Region deserialize(String json)
+	public Note deserialize(String json)
 	{
 		try
 		{
-			return mapper.readValue(json, Region.class);
-		} 
-		catch (Exception e)
+			return mapper.readValue(json, Note.class);
+		}
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
-	public List<Region> deserializeList(String json)
+	public List<Note> deserializeList(String json)
 	{
 		try
 		{
-			return mapper.readValue(json, new TypeReference<List<Region>>(){});
-		} 
-		catch (Exception e)
+			return mapper.readValue(json, new TypeReference<List<Note>>() {});
+		}
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
 
 	@Override
-	public String serialize(Region obj)
+	public String serialize(Note obj)
 	{
 		try
 		{
 			return mapper.writeValueAsString(obj);
-		} 
-		catch (Exception e)
+		}
+		catch(Exception e)
 		{
 			throw new RuntimeException(e);
 		}
 	}
+
 }
